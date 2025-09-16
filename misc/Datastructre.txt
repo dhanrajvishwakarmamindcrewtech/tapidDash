@@ -1,0 +1,91 @@
+// Top-level collections
+users (collection - managed by separate frontend app)
+└── {userId} (document)
+    // ... managed by auth frontend
+
+businesses (collection)
+└── {businessId} (document)
+    ├── info (fields)
+    │   ├── businessName
+    │   ├── taxId
+    │   ├── websiteUrl
+    │   ├── industry
+    │   ├── createdAt
+    │   ├── updatedAt
+    │   └── businessOwnerId (reference to users collection)
+    │
+    ├── authorizedUsers (fields - array of user IDs)
+    │   └── [{userId, role, addedAt}, ...]
+    │
+    ├── settings (fields)
+    │   ├── primaryColor
+    │   ├── darkMode
+    │   ├── emailNotifications
+    │   ├── smsNotifications
+    │   ├── twoFactorAuth
+    │   ├── sessionTimeout
+    │   └── logRetention
+    │
+    ├── subscription (fields)
+    │   ├── plan
+    │   ├── status
+    │   ├── seats
+    │   ├── startDate
+    │   └── renewalDate
+    │
+    ├── locations (subcollection)
+    │   └── {locationId} (document)
+    │       ├── info (fields)
+    │       │   ├── name
+    │       │   ├── address
+    │       │   ├── phone
+    │       │   ├── email
+    │       │   ├── timezone
+    │       │   └── status
+    │       │
+    │       ├── managers (array of user IDs)
+    │       │   └── [{userId, role, addedAt}, ...]
+    │       │
+    │       ├── operatingHours (fields)
+    │       │   ├── monday { open, close }
+    │       │   ├── tuesday { open, close }
+    │       │   └── ... (other days)
+    │       │
+    │       ├── customers (subcollection)
+    │       │   └── {customerId} (document)
+    │       │       ├── name
+    │       │       ├── email
+    │       │       ├── phone
+    │       │       ├── joinDate
+    │       │       ├── segment
+    │       │       ├── status
+    │       │       ├── totalSpend
+    │       │       ├── visitCount
+    │       │       ├── lastVisit
+    │       │       └── preferences
+    │       │
+    │       ├── campaigns (subcollection)
+    │       │   └── {campaignId} (document)
+    │       │       ├── type (primary/flash/recurring/group/nudge)
+    │       │       ├── title
+    │       │       ├── description
+    │       │       ├── startDate
+    │       │       ├── endDate
+    │       │       ├── status
+    │       │       ├── conditions
+    │       │       ├── rewards
+    │       │       └── metrics
+    │       │
+    │       └── analytics (subcollection)
+    │           └── {timeframe} (document)
+    │               ├── customerMetrics
+    │               ├── campaignPerformance
+    │               ├── revenueStats
+    │               └── engagementData
+    │
+    └── integrations (subcollection)
+        └── {integrationType} (document)
+            ├── status
+            ├── config
+            ├── apiKeys (encrypted)
+            └── lastSync

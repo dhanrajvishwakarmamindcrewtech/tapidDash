@@ -1,0 +1,162 @@
+{
+  "loyalty": {
+    "pointsPerEuro": 10,
+    "currency": "EUR",
+    "maxTiers": 5,
+    "minTiers": 3,
+    "pointIncrement": 500,
+    "defaultTierPoints": [500, 1000, 2000]
+  },
+  "ui": {
+    "pageTitle": "Launch Pad",
+    "pageSubtitle": "Your points-based loyalty control center",
+    "sections": {
+      "myCampaign": "My Launch Pad",
+      "myPerformance": "My Performance",
+      "createCampaign": "Create Campaign"
+    },
+    "labels": {
+      "lastUpdated": "Last updated",
+      "campaignName": "Campaign Name",
+      "rewardDescription": "Reward Description", 
+      "rewards": "Rewards",
+      "stage": "Stage",
+      "points": "points",
+      "euros": "euros",
+      "spent": "spent",
+      "at": "at",
+      "pts": "pts"
+    },
+    "pagination": {
+      "cardsPerPage": 4,
+      "totalPerfCards": 8
+    }
+  },
+      "campaigns": {
+    "autoGenSample": {
+      "campaignName": "Tapid Points Campaign",
+      "rewardDescription": "Free items for loyal spenders",
+      "tiers": [
+        { "rewardText": "Free Espresso", "points": 500 },
+        { "rewardText": "Free Lunch Combo", "points": 1000 },
+        { "rewardText": "10 Voucher", "points": 2000 }
+      ],
+      "isActive": true
+    }
+  },
+  "kpis": [
+    {
+      "key": "totalCustomers",
+      "title": "Total Customers",
+      "dataSource": "customerStats.total"
+    },
+    {
+      "key": "totalRevenue", 
+      "title": "Total Revenue",
+      "dataSource": "customerStats.totalSpend"
+    },
+    {
+      "key": "rewardsEarned",
+      "title": "Rewards Earned", 
+      "dataSource": "customerStats.totalRewardsEarned"
+    },
+    {
+      "key": "avgSpendPerWeek",
+      "title": "Avg. Spend/Week",
+      "dataSource": "customerStats.avgSpend",
+      "transform": "divide",
+      "transformValue": 7.5
+    }
+  ],
+  "analytics": {
+    "cards": [
+      {
+        "key": "activePoints",
+        "title": "Active Points",
+        "description": "Total points currently in circulation",
+        "mockData": { "active": 1240, "inactive": 0 }
+      },
+      {
+        "key": "redeemRate", 
+        "title": "Redeem Rate",
+        "description": "% of earned rewards that are redeemed",
+        "mockData": { "active": 84, "inactive": 0 }
+      },
+      {
+        "key": "mostRedemption",
+        "title": "Most Redemption Tier",
+        "description": "Which tier gets redeemed most often",
+        "mockData": [
+          { "label": 500, "value": 0.6, "active": false },
+          { "label": 1000, "value": 1.0, "active": true },
+          { "label": 2000, "value": 0.4, "active": false }
+        ]
+      },
+      {
+        "key": "unredeemed",
+        "title": "Unredeemed",
+        "description": "Rewards earned but not yet redeemed",
+        "mockData": { "active": 37, "inactive": 0 }
+      },
+      {
+        "key": "redemptionRate",
+        "title": "Redemption Rate",
+        "description": "Average redemption frequency",
+        "mockData": { "percentage": 68, "label": "redeemed" }
+      },
+      {
+        "key": "redemptionTime",
+        "title": "Redemption Time",
+        "description": "Average time to redeem rewards",
+        "mockData": { "active": 3.2, "inactive": 0, "unit": "d" }
+      },
+      {
+        "key": "firstTimeEarners",
+        "title": "First-Time Earners",
+        "description": "New customers earning their first reward",
+        "mockData": { "active": 12, "inactive": 0 }
+      },
+      {
+        "key": "referralBoost",
+        "title": "Referral Boost",
+        "description": "Boost in engagement from referrals",
+        "mockData": { "percentage": 34, "label": "boost" }
+      }
+    ]
+  },
+  "validation": {
+    "campaignName": {
+      "required": true,
+      "minLength": 3,
+      "maxLength": 50
+    },
+    "rewardDescription": {
+      "required": true,
+      "minLength": 10,
+      "maxLength": 200
+    },
+    "tierPoints": {
+      "required": true,
+      "min": 1
+    },
+    "tierProgression": {
+      "required": true
+    }
+  },
+  "messages": {
+    "success": {
+      "campaignSaved": "Campaign saved successfully!",
+      "campaignDeleted": "Campaign deleted successfully!"
+    },
+    "errors": {
+      "saveFailed": "Failed to save campaign. Please try again.",
+      "deleteFailed": "Failed to delete campaign. Please try again.",
+      "loadFailed": "Failed to load campaign data. Please refresh the page."
+    },
+    "info": {
+      "autoGenApplied": "Auto-generated sample applied successfully",
+      "noSavedCampaign": "No saved campaign found. Create your first campaign to get started!",
+      "previewUnavailable": "Preview will be available once you add tier rewards"
+    }
+  }
+} 

@@ -1,0 +1,158 @@
+{
+  "customers": [
+    {
+      "id": "C001",
+      "name": "Sarah O'Brien",
+      "email": "sarah.obrien@email.com",
+      "phone": "+353 86 123 4567",
+      "totalSpend": 284.5,
+      "visitCount": 23,
+      "rewardsEarned": 8,
+      "rewardsRedeemed": 5,
+      "lastVisit": "2025-06-10",
+      "firstVisit": "2024-12-15",
+      "segment": "VIP",
+      "status": "active",
+      "location": "dublin-city",
+      "avgOrderValue": 12.37,
+      "tier": "VIP",
+      "birthDate": "1987-03-15",
+      "preferences": ["coffee", "pastries"],
+      "communicationPrefs": { "email": true, "sms": false, "push": true }
+    },
+    {
+      "id": "C002",
+      "name": "Michael Chen",
+      "email": "michael.chen@email.com",
+      "phone": "+353 87 234 5678",
+      "totalSpend": 156.8,
+      "visitCount": 12,
+      "rewardsEarned": 4,
+      "rewardsRedeemed": 3,
+      "lastVisit": "2025-06-11",
+      "firstVisit": "2025-01-20",
+      "segment": "Regular",
+      "status": "active",
+      "location": "dublin-south",
+      "avgOrderValue": 13.07,
+      "tier": "Gold",
+      "birthDate": "1992-08-22",
+      "preferences": ["specialty-coffee"],
+      "communicationPrefs": { "email": true, "sms": true, "push": false }
+    },
+    {
+      "id": "C003",
+      "name": "Emma Walsh",
+      "email": "emma.walsh@email.com",
+      "phone": "+353 85 345 6789",
+      "totalSpend": 89.2,
+      "visitCount": 7,
+      "rewardsEarned": 2,
+      "rewardsRedeemed": 1,
+      "lastVisit": "2025-05-15",
+      "firstVisit": "2025-02-10",
+      "segment": "At-Risk",
+      "status": "at-risk",
+      "location": "cork-main",
+      "avgOrderValue": 12.74,
+      "tier": "Silver",
+      "birthDate": "1995-11-30",
+      "preferences": ["tea", "sandwiches"],
+      "communicationPrefs": { "email": false, "sms": true, "push": true }
+    },
+    {
+      "id": "C004",
+      "name": "David Murphy",
+      "email": "david.murphy@email.com",
+      "phone": "+353 83 456 7890",
+      "totalSpend": 42.3,
+      "visitCount": 3,
+      "rewardsEarned": 1,
+      "rewardsRedeemed": 0,
+      "lastVisit": "2025-06-12",
+      "firstVisit": "2025-05-28",
+      "segment": "New",
+      "status": "new",
+      "location": "dublin-city",
+      "avgOrderValue": 14.1,
+      "tier": "Bronze",
+      "birthDate": "1990-07-18",
+      "preferences": ["coffee"],
+      "communicationPrefs": { "email": true, "sms": false, "push": false }
+    },
+    {
+      "id": "C005",
+      "name": "Lisa Kelly",
+      "email": "lisa.kelly@email.com",
+      "phone": "+353 89 567 8901",
+      "totalSpend": 312.7,
+      "visitCount": 28,
+      "rewardsEarned": 12,
+      "rewardsRedeemed": 9,
+      "lastVisit": "2025-06-09",
+      "firstVisit": "2024-11-05",
+      "segment": "VIP",
+      "status": "active",
+      "location": "dublin-south",
+      "avgOrderValue": 11.17,
+      "tier": "VIP",
+      "birthDate": "1985-12-12",
+      "preferences": ["coffee", "pastries", "lunch"],
+      "communicationPrefs": { "email": true, "sms": true, "push": true }
+    }
+  ],
+  "analytics": {
+    "weeklyRevenue": [
+      { "day": "Mon", "amount": 145 },
+      { "day": "Tue", "amount": 120 },
+      { "day": "Wed", "amount": 178 },
+      { "day": "Thu", "amount": 234 },
+      { "day": "Fri", "amount": 289 },
+      { "day": "Sat", "amount": 354 },
+      { "day": "Sun", "amount": 198 }
+    ],
+    "customerGrowth": [
+      { "month": "Jan", "new": 45, "returning": 67 },
+      { "month": "Feb", "new": 52, "returning": 78 },
+      { "month": "Mar", "new": 48, "returning": 85 },
+      { "month": "Apr", "new": 61, "returning": 92 },
+      { "month": "May", "new": 58, "returning": 89 },
+      { "month": "Jun", "new": 64, "returning": 95 }
+    ]
+  },
+  "campaigns": {
+    "primaryRewards": [
+      {
+        "id": 1,
+        "type": "points",
+        "title": "Spend & Earn Points",
+        "goal": 100,
+        "reward": "Free pastry",
+        "expiry": null,
+        "isActive": true,
+        "notifications": true,
+        "performance": { "earned": 156, "redeemed": 134, "activeCards": 67 },
+        "createdDate": "2025-02-01"
+      }
+    ],
+    "flashPromotions": [
+      {
+        "id": 3,
+        "title": "Rainy Day Special",
+        "startTime": "2025-06-12T14:00",
+        "endTime": "2025-06-12T18:00",
+        "targetGroup": "all",
+        "reward": "Free croissant with any coffee",
+        "limit": 25,
+        "baseCampaignId": 1,
+        "isActive": true,
+        "notifications": true,
+        "performance": { "sent": 247, "redeemed": 18, "remaining": 7 },
+        "createdDate": "2025-06-12"
+      }
+    ],
+    "recurringPromotions": [],
+    "groupRewards": [],
+    "nudgeCampaigns": []
+  }
+} 

@@ -1,0 +1,1322 @@
+/* ReportsPage.module.css - Tapid Enterprise Reports Interface */
+
+:root {
+  /* Tapid Brand Colors */
+  --tapid-teal: #3FBAC2;
+  --success-green: #4CAF87;
+  --charcoal-navy: #1A1A1A;
+  --off-black: #2A2E35;
+  --white: #FFFFFF;
+  
+  /* Neutrals & UI Grays */
+  --light-navy-gray: #F4F6F8;
+  --soft-gray: #D2D6DB;
+  --mid-gray: #A0A4A8;
+  --dark-gray: #4A4A4A;
+  
+  /* Accent & State Colors */
+  --highlight-coral: #F66A6A;
+  --info-blue: #5B9BD5;
+  --alert-yellow: #F9CB40;
+  
+  /* Shadows */
+  --shadow-soft: 0 2px 4px rgba(26, 26, 26, 0.06);
+  --shadow-medium: 0 4px 12px rgba(26, 26, 26, 0.1);
+  --shadow-large: 0 8px 24px rgba(26, 26, 26, 0.12);
+}
+
+/* Main container */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  min-height: 100vh;
+  background: var(--light-navy-gray);
+}
+
+.welcomeHeader {
+  padding: 1.5rem 0 1rem 0;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.welcomeContent {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2.5rem;
+}
+
+.greetingSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.greetingRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.greetingMain {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+  letter-spacing: -0.025em;
+}
+
+.greetingPill {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: -0.025em;
+}
+
+.lastUpdated {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #6c757d;
+  font-size: 0.95rem;
+  background: #fff;
+  padding: 0.65rem 1.1rem;
+  border-radius: 0.7rem;
+  border: 1px solid #ececec;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.lastUpdated svg {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Content */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Sections */
+.section {
+  background: var(--white);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 3rem;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--soft-gray);
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--charcoal-navy);
+  margin: 0;
+}
+
+.sectionDescription {
+  color: var(--dark-gray);
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+/* Analytics Grid - 4 in a row */
+.analyticsGrid4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 1200px) {
+  .analyticsGrid4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .analyticsGrid4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Selection Controls */
+.selectionControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.5rem;
+  background: #fff;
+  border: 1px solid #ececec;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.selectionInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.selectedCount {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #008A9B;
+}
+
+.selectionActions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Report Selection Grid */
+.analyticsCard {
+  background: #fff;
+  border: 1.5px solid #ececec;
+  border-radius: 1.1rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  transition: all 0.15s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.analyticsCard:hover {
+  border-color: #008A9B;
+  box-shadow: 0 4px 20px rgba(121, 80, 242, 0.12);
+  transform: translateY(-1px);
+}
+
+.analyticsCard.selectedCard {
+  border-color: #008A9B;
+  background: linear-gradient(135deg, #f8f7ff 0%, #f0fffe 100%);
+  box-shadow: 0 4px 20px rgba(121, 80, 242, 0.15);
+}
+
+/* Generate Report Button */
+.generateReportButton {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #008A9B 0%, #00BD84 100%);
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(121, 80, 242, 0.2);
+  min-width: 180px;
+  justify-content: center;
+}
+
+.generateReportButton:hover:not(.disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(121, 80, 242, 0.3);
+  background: linear-gradient(135deg, #00BD84 0%, #006B7A 100%);
+}
+
+.generateReportButton.disabled {
+  background: var(--light-navy-gray);
+  color: var(--mid-gray);
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.analyticsCardContent {
+  width: 100%;
+}
+
+.analyticsCardFooter {
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.analyticsValueCard {
+  background: #fff;
+  border: 2px dashed #e5dbff;
+  border-radius: 1.1rem;
+  padding: 1.1rem 0.7rem;
+  margin: 0.7rem auto 0.7rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 88px;
+  width: 92%;
+  box-sizing: border-box;
+}
+
+.analyticsValue {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #232428;
+  text-align: center;
+}
+
+.cardHeader {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #232428;
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.01em;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.cardDesc {
+  font-size: 0.97rem;
+  color: #888;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.progressLabel {
+  font-size: 0.97rem;
+  color: #888;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* Primary Button - Stripe Style */
+.primaryButton {
+  background: linear-gradient(90deg, #008A9B 60%, #00BD84 100%);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.85rem 2.2rem;
+  box-shadow: 0 2px 8px rgba(0,138,155,0.08);
+  cursor: pointer;
+  transition: background 0.18s, box-shadow 0.18s, opacity 0.18s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.primaryButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #e5dbff;
+  color: #aaa;
+}
+
+/* Change Values */
+.changeValue {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.changeValue.up {
+  color: var(--success-green);
+}
+
+.changeValue.down {
+  color: var(--highlight-coral);
+}
+
+.changePeriod {
+  font-size: 0.8rem;
+  color: var(--mid-gray);
+}
+
+/* Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: modalIn 0.2s ease-out;
+}
+
+.modalContent {
+  background: #fff;
+  border-radius: 1.1rem;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modalClose {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalClose:hover {
+  background: #f0f0f0;
+  color: #232428;
+}
+
+.primaryButton {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 1.5rem;
+  background: linear-gradient(90deg, #008A9B 60%, #00BD84 100%);
+  color: #fff;
+  border: none;
+  border-radius: 0.7rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.15s;
+  box-shadow: 0 2px 8px rgba(0,138,155,0.08);
+}
+
+.primaryButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,138,155,0.15);
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--soft-gray);
+}
+
+.modalTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--charcoal-navy);
+  margin: 0;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: var(--mid-gray);
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.closeButton:hover {
+  background: var(--light-navy-gray);
+  color: var(--charcoal-navy);
+}
+
+.modalDescription {
+  color: var(--dark-gray);
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+}
+
+.periodOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.periodOption {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  padding: 0.75rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+  border: 1px solid var(--soft-gray);
+}
+
+.periodOption:hover {
+  background: var(--light-navy-gray);
+  border-color: var(--tapid-teal);
+}
+
+.periodOption input[type="radio"] {
+  accent-color: var(--tapid-teal);
+  width: 1rem;
+  height: 1rem;
+}
+
+.periodOption span {
+  font-weight: 500;
+  color: var(--charcoal-navy);
+  font-size: 0.875rem;
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  border-top: 1px solid var(--soft-gray);
+}
+
+.cancelButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--white);
+  color: var(--off-black);
+  border: 1px solid var(--soft-gray);
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-soft);
+}
+
+.cancelButton:hover {
+  background: var(--light-navy-gray);
+  border-color: var(--mid-gray);
+  transform: translateY(-1px);
+}
+
+.generateButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--tapid-teal);
+  color: var(--white);
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-soft);
+}
+
+.generateButton:hover:not(:disabled) {
+  background: #359EA5;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-medium);
+}
+
+.generateButton:disabled {
+  background: var(--mid-gray);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Loading State */
+.loadingState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  color: var(--dark-gray);
+}
+
+.loadingSpinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--soft-gray);
+  border-top: 3px solid var(--tapid-teal);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error State */
+.errorState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  text-align: center;
+  color: var(--dark-gray);
+}
+
+.errorState h3 {
+  color: var(--charcoal-navy);
+  margin-bottom: 0.5rem;
+}
+
+.errorState button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--tapid-teal);
+  color: var(--white);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Generated Reports Section */
+.generatedReportsSection {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--soft-gray);
+}
+
+.generatedReportsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Report Modal Content */
+.reportModalContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.reportTypeInfo h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--charcoal-navy);
+  margin: 0 0 0.5rem 0;
+}
+
+.reportTypeDescription {
+  color: var(--dark-gray);
+  font-size: 0.875rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.periodSelection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.periodSelection label {
+  font-weight: 500;
+  color: var(--charcoal-navy);
+  font-size: 0.875rem;
+}
+
+.reportPreview {
+  background: var(--light-navy-gray);
+  border: 1px solid var(--soft-gray);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.reportPreview h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--charcoal-navy);
+  margin: 0 0 0.75rem 0;
+}
+
+.reportPreview ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--dark-gray);
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.reportPreview li {
+  margin-bottom: 0.25rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    gap: 1rem;
+  }
+  
+  .section {
+    padding: 1rem;
+  }
+  
+  .sectionHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .modal {
+    margin: 0.5rem;
+  }
+  
+  .modalHeader,
+  .modalContent,
+  .modalFooter {
+    padding: 1rem;
+  }
+  
+  .reportModalContent {
+    gap: 1rem;
+  }
+  
+  .reportPreview {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .periodOptions {
+    gap: 0.5rem;
+  }
+  
+  .periodOption {
+    padding: 0.5rem;
+  }
+}
+
+/* Scheduled Reports List */
+.scheduledReportsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.scheduledReportCard {
+  background: #fff;
+  border: 1.5px solid #ececec;
+  border-radius: 1.1rem;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.15s ease;
+}
+
+.scheduledReportCard:hover {
+  border-color: #008A9B;
+  box-shadow: var(--shadow-medium);
+  transform: translateY(-1px);
+}
+
+.scheduledReportContent {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.scheduledReportIcon {
+  color: #008A9B;
+  flex-shrink: 0;
+}
+
+.scheduledReportInfo {
+  flex: 1;
+}
+
+.scheduledReportInfo h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #232428;
+  margin: 0 0 0.25rem 0;
+}
+
+.scheduledReportInfo p {
+  color: #6c757d;
+  font-size: 0.95rem;
+  margin: 0 0 0.25rem 0;
+}
+
+.scheduledSince {
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.scheduledReportActions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.editReportButton {
+  padding: 0.5rem 1rem;
+  background: #f0fffe;
+  color: #008A9B;
+  border: 1.5px solid #008A9B;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.editReportButton:hover {
+  background: #008A9B;
+  color: #fff;
+}
+
+.deleteReportButton {
+  padding: 0.5rem 1rem;
+  background: #fff0f0;
+  color: #e03131;
+  border: 1.5px solid #e03131;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.deleteReportButton:hover {
+  background: #e03131;
+  color: #fff;
+}
+
+.addNewReportButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: #f8fefd;
+  color: #008A9B;
+  border: 1.5px dashed #008A9B;
+  border-radius: 1.1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  margin-top: 0.5rem;
+}
+
+.addNewReportButton:hover {
+  background: #f0fffe;
+  border-style: solid;
+}
+
+/* Connect Center Styles */
+.connectCenterCard {
+  background: #fff;
+  border: none;
+  border-radius: 1.1rem;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.connectCenterContent {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.connectCenterIcon {
+  color: #008A9B;
+  flex-shrink: 0;
+}
+
+.connectCenterText {
+  flex: 1;
+}
+
+.connectCenterText h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #232428;
+  margin: 0 0 0.5rem 0;
+}
+
+.connectCenterText p {
+  color: #888;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.connectCenterButton {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 1.5rem;
+  background: linear-gradient(90deg, #008A9B 60%, #00BD84 100%);
+  color: #fff;
+  border: none;
+  border-radius: 0.7rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.15s;
+  box-shadow: 0 2px 8px rgba(0,138,155,0.08);
+  flex-shrink: 0;
+}
+
+.connectCenterButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,138,155,0.15);
+}
+
+/* Modal Styles */
+.modalHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.modalHeader h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #232428;
+  margin: 0 0 0.5rem 0;
+}
+
+.modalHeader p {
+  color: #888;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.recurringForm {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.formSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formSection .sectionTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #232428;
+  margin-bottom: 0.5rem;
+}
+
+/* Frequency Options */
+.frequencyOptions {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.frequencyOption {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  padding: 1rem 1.1rem;
+  border: 1.5px solid #ececec;
+  border-radius: 0.9rem;
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+  flex: 1;
+}
+
+.frequencyOption:hover {
+  border-color: #008A9B;
+  box-shadow: var(--shadow-medium);
+  transform: translateY(-1px);
+  background: #f8fefd;
+}
+
+.frequencyOption.selected {
+  border-color: #008A9B;
+  background: linear-gradient(135deg, #f8fefd 0%, #f0fffe 100%);
+  box-shadow: var(--shadow-medium);
+}
+
+.frequencyContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.frequencyIcon {
+  font-size: 1.5rem;
+  margin-top: 0.1rem;
+}
+
+.frequencyTitle {
+  font-weight: 700;
+  color: #232428;
+  font-size: 0.98rem;
+  margin-bottom: 0.2rem;
+}
+
+.frequencyDesc {
+  color: #6c757d;
+  font-size: 0.86rem;
+  line-height: 1.3;
+}
+
+/* Modal Actions */
+.modalActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #ececec;
+}
+
+.cancelButton {
+  padding: 0.9rem 1.5rem;
+  background: #f4f6f8;
+  color: #232428;
+  border: 1.5px solid #ececec;
+  border-radius: 0.7rem;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.cancelButton:hover {
+  background: #f0f0f0;
+  border-color: #d0d0d0;
+}
+
+.scheduleButton {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 1.5rem;
+  background: linear-gradient(90deg, #008A9B 60%, #00BD84 100%);
+  color: #fff;
+  border: none;
+  border-radius: 0.7rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.15s;
+  box-shadow: 0 2px 8px rgba(0,138,155,0.08);
+}
+
+.scheduleButton:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,138,155,0.15);
+}
+
+.scheduleButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #e5dbff;
+  color: #aaa;
+}
+
+/* Responsive Design for Connect Center */
+@media (max-width: 768px) {
+  .connectCenterContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .connectCenterButton {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .frequencyOptions {
+    gap: 0.5rem;
+  }
+  
+  .frequencyOption {
+    padding: 0.75rem;
+  }
+  
+  .modalActions {
+    flex-direction: column;
+  }
+  
+  .cancelButton,
+  .scheduleButton {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Recipient Styles */
+.recipientSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.recipientToggle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.recipientToggle label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  color: #232428;
+  cursor: pointer;
+}
+
+.recipientToggle input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #008A9B;
+}
+
+.recipientInputs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.recipientField {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.recipientField input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1.5px solid #ececec;
+  border-radius: 0.7rem;
+  font-size: 0.95rem;
+  background: #fafaff;
+  transition: border 0.15s;
+}
+
+.recipientField input:focus {
+  outline: none;
+  border-color: #008A9B;
+  background: #f0fffe;
+}
+
+.removeRecipient {
+  background: none;
+  border: none;
+  color: #e03131;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: background 0.15s;
+}
+
+.removeRecipient:hover {
+  background: #fff0f0;
+}
+
+.addRecipient {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: #f0fffe;
+  color: #008A9B;
+  border: 1.5px dashed #008A9B;
+  border-radius: 0.7rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.15s;
+  width: fit-content;
+}
+
+.addRecipient:hover {
+  background: #e5dbff;
+  border-color: #008A9B;
+}
+
+/* Data Scope Styles */
+.dataScopeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.dataScopeItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  padding: 1rem 1.1rem;
+  border: 1.5px solid #ececec;
+  border-radius: 0.9rem;
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.dataScopeItem:hover {
+  border-color: #008A9B;
+  box-shadow: var(--shadow-medium);
+  transform: translateY(-1px);
+  background: #f8fefd;
+}
+
+.dataScopeItem input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #008A9B;
+  margin-top: 0.2rem;
+}
+
+/* checked state */
+.dataScopeItem:has(input[type="checkbox"]:checked) {
+  border-color: #00BD84;
+  background: linear-gradient(135deg, #f8fefd 0%, #f0fffe 100%);
+  box-shadow: var(--shadow-medium);
+}
+
+.dataScopeContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.dataScopeIcon {
+  font-size: 1.5rem;
+  margin-top: 0.1rem;
+}
+
+.dataScopeTitle {
+  font-weight: 600;
+  color: #232428;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.dataScopeDesc {
+  font-size: 0.875rem;
+  color: #6c757d;
+  margin: 0;
+}
+
+/* Mobile Responsive for Report Selection */
+@media (max-width: 768px) {
+  .selectionControls {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+    padding: 1rem;
+  }
+  
+  .selectionInfo {
+    justify-content: center;
+  }
+  
+  .selectionActions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .generateReportButton {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .analyticsCard {
+    padding: 1.25rem;
+  }
+
+  .frequencyOptions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .frequencyOption {
+    flex: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .selectionControls {
+    padding: 0.75rem;
+  }
+  
+  .selectedCount {
+    font-size: 0.875rem;
+  }
+  
+  .selectionActions {
+    gap: 0.5rem;
+  }
+  
+  .generateReportButton {
+    padding: 0.75rem 1rem;
+    font-size: 0.8rem;
+    min-width: auto;
+  }
+  
+  .analyticsCard {
+    padding: 1rem;
+  }
+  
+  .cardHeader {
+    font-size: 1rem;
+  }
+  
+  .cardDesc {
+    font-size: 0.85rem;
+  }
+}

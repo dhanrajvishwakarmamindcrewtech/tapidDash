@@ -1,0 +1,338 @@
+{
+  "posTerminals": {
+    "available": [
+      {
+        "id": "sumup",
+        "name": "SumUp",
+        "description": "Popular card reader and payment terminal",
+        "iconName": "CreditCard",
+        "features": ["Contactless payments", "Mobile app integration", "Low transaction fees"],
+        "color": "#7950f2",
+        "category": "payment_processor"
+      },
+      {
+        "id": "square",
+        "name": "Square", 
+        "description": "Complete point-of-sale system",
+        "iconName": "Smartphone",
+        "features": ["Full POS system", "Analytics dashboard", "Inventory management"],
+        "color": "#00c851",
+        "category": "full_pos"
+      }
+    ],
+    "comingSoon": [
+      {
+        "id": "clover",
+        "name": "Clover",
+        "description": "Flexible POS for retail, restaurants, and services",
+        "iconName": "Store",
+        "features": ["Customizable hardware", "App marketplace", "Multi-location support"],
+        "color": "#ff6b35",
+        "category": "enterprise"
+      },
+      {
+        "id": "shopify",
+        "name": "Shopify POS",
+        "description": "POS for e-commerce and brick-and-mortar",
+        "iconName": "ShoppingCart",
+        "features": ["Unified online/offline sales", "Inventory sync", "Customer profiles"],
+        "color": "#95bf47",
+        "category": "ecommerce_pos"
+      },
+      {
+        "id": "toast",
+        "name": "Toast",
+        "description": "Restaurant-focused POS system",
+        "iconName": "Zap",
+        "features": ["Order management", "Table service", "Online ordering"],
+        "color": "#ff6b6b",
+        "category": "restaurant"
+      },
+      {
+        "id": "stripe",
+        "name": "Stripe Terminal",
+        "description": "Developer-friendly in-person payments",
+        "iconName": "CreditCard",
+        "features": ["Custom hardware", "API-first", "Advanced analytics"],
+        "color": "#6772e5",
+        "category": "developer"
+      },
+      {
+        "id": "lightspeed",
+        "name": "Lightspeed",
+        "description": "POS for retail, restaurants, and golf",
+        "iconName": "Diamond",
+        "features": ["Inventory management", "Customer loyalty", "Multi-location"],
+        "color": "#007bff",
+        "category": "retail"
+      },
+      {
+        "id": "vend",
+        "name": "Vend",
+        "description": "Cloud-based retail POS",
+        "iconName": "BarChart3",
+        "features": ["Inventory", "Customer loyalty", "E-commerce integration"],
+        "color": "#28a745",
+        "category": "cloud_pos"
+      }
+    ]
+  },
+  "queueEfficiency": {
+    "currentPerformance": {
+      "averageServiceTime": 3.4,
+      "efficiencyScore": 82,
+      "customersPerHour": 18,
+      "peakHour": 12,
+      "busyThreshold": 4.0,
+      "peakEfficiency": 95,
+      "improvementTip": "Consider additional staff during 12-2 PM rush"
+    },
+    "weeklyTrend": [
+      {
+        "day": "Monday",
+        "efficiency": 78,
+        "serviceTime": 3.8,
+        "customersPerHour": 16,
+        "status": "optimal"
+      },
+      {
+        "day": "Tuesday", 
+        "efficiency": 95,
+        "serviceTime": 2.1,
+        "customersPerHour": 8,
+        "status": "underutilized"
+      },
+      {
+        "day": "Wednesday",
+        "efficiency": 79,
+        "serviceTime": 3.6,
+        "customersPerHour": 17,
+        "status": "optimal"
+      },
+      {
+        "day": "Thursday",
+        "efficiency": 85,
+        "serviceTime": 3.1,
+        "customersPerHour": 19,
+        "status": "optimal"
+      },
+      {
+        "day": "Friday",
+        "efficiency": 65,
+        "serviceTime": 4.8,
+        "customersPerHour": 22,
+        "status": "overworked"
+      },
+      {
+        "day": "Saturday",
+        "efficiency": 92,
+        "serviceTime": 2.5,
+        "customersPerHour": 11,
+        "status": "underutilized"
+      },
+      {
+        "day": "Sunday",
+        "efficiency": 68,
+        "serviceTime": 4.5,
+        "customersPerHour": 25,
+        "status": "overworked"
+      }
+    ],
+    "workloadStatuses": {
+      "overworked": {
+        "level": "Overworked",
+        "color": "#ef4444",
+        "iconName": "AlertTriangle",
+        "recommendation": "Add 1-2 staff members during peak hours",
+        "description": "Staff are struggling to maintain service quality",
+        "suggestedStaff": 3
+      },
+      "optimal": {
+        "level": "Optimal", 
+        "color": "#10b981",
+        "iconName": "CheckCircle",
+        "recommendation": "Current staffing level is well-balanced",
+        "description": "Staff are performing efficiently without being overwhelmed",
+        "suggestedStaff": 2
+      },
+      "excellent": {
+        "level": "Excellent",
+        "color": "#10b981", 
+        "iconName": "Award",
+        "recommendation": "Maintain current staffing strategy",
+        "description": "High efficiency with good customer throughput",
+        "suggestedStaff": 2
+      },
+      "underutilized": {
+        "level": "Underutilized",
+        "color": "#3b82f6",
+        "iconName": "Info", 
+        "recommendation": "Consider cross-training staff for other tasks",
+        "description": "Staff capacity could be better utilized during quiet periods",
+        "suggestedStaff": 1
+      }
+    },
+    "paymentAnalysis": {
+      "totalTransactions": 1247,
+      "averageSpend": 23.45,
+      "currentProviderRate": 2.5,
+      "tapidPayRate": 1.5,
+      "savingsRate": 1.0
+    },
+    "dailyHourlyActivity": {
+      "Monday": [
+        { "hour": "9 AM", "transactions": 12, "customers": 8 },
+        { "hour": "10 AM", "transactions": 18, "customers": 12 },
+        { "hour": "11 AM", "transactions": 25, "customers": 18 },
+        { "hour": "12 PM", "transactions": 42, "customers": 32 },
+        { "hour": "1 PM", "transactions": 38, "customers": 28 },
+        { "hour": "2 PM", "transactions": 35, "customers": 25 },
+        { "hour": "3 PM", "transactions": 28, "customers": 20 },
+        { "hour": "4 PM", "transactions": 22, "customers": 16 },
+        { "hour": "5 PM", "transactions": 15, "customers": 11 }
+      ],
+      "Tuesday": [
+        { "hour": "9 AM", "transactions": 8, "customers": 6 },
+        { "hour": "10 AM", "transactions": 14, "customers": 10 },
+        { "hour": "11 AM", "transactions": 20, "customers": 15 },
+        { "hour": "12 PM", "transactions": 35, "customers": 26 },
+        { "hour": "1 PM", "transactions": 32, "customers": 24 },
+        { "hour": "2 PM", "transactions": 28, "customers": 21 },
+        { "hour": "3 PM", "transactions": 22, "customers": 16 },
+        { "hour": "4 PM", "transactions": 18, "customers": 13 },
+        { "hour": "5 PM", "transactions": 12, "customers": 9 }
+      ],
+      "Wednesday": [
+        { "hour": "9 AM", "transactions": 15, "customers": 11 },
+        { "hour": "10 AM", "transactions": 22, "customers": 16 },
+        { "hour": "11 AM", "transactions": 28, "customers": 21 },
+        { "hour": "12 PM", "transactions": 45, "customers": 34 },
+        { "hour": "1 PM", "transactions": 41, "customers": 31 },
+        { "hour": "2 PM", "transactions": 38, "customers": 28 },
+        { "hour": "3 PM", "transactions": 32, "customers": 24 },
+        { "hour": "4 PM", "transactions": 25, "customers": 19 },
+        { "hour": "5 PM", "transactions": 18, "customers": 14 }
+      ],
+      "Thursday": [
+        { "hour": "9 AM", "transactions": 20, "customers": 15 },
+        { "hour": "10 AM", "transactions": 26, "customers": 19 },
+        { "hour": "11 AM", "transactions": 32, "customers": 24 },
+        { "hour": "12 PM", "transactions": 48, "customers": 36 },
+        { "hour": "1 PM", "transactions": 44, "customers": 33 },
+        { "hour": "2 PM", "transactions": 40, "customers": 30 },
+        { "hour": "3 PM", "transactions": 35, "customers": 26 },
+        { "hour": "4 PM", "transactions": 28, "customers": 21 },
+        { "hour": "5 PM", "transactions": 22, "customers": 16 }
+      ],
+      "Friday": [
+        { "hour": "9 AM", "transactions": 25, "customers": 19 },
+        { "hour": "10 AM", "transactions": 35, "customers": 26 },
+        { "hour": "11 AM", "transactions": 42, "customers": 32 },
+        { "hour": "12 PM", "transactions": 58, "customers": 44 },
+        { "hour": "1 PM", "transactions": 55, "customers": 42 },
+        { "hour": "2 PM", "transactions": 52, "customers": 39 },
+        { "hour": "3 PM", "transactions": 45, "customers": 34 },
+        { "hour": "4 PM", "transactions": 38, "customers": 29 },
+        { "hour": "5 PM", "transactions": 32, "customers": 24 }
+      ],
+      "Saturday": [
+        { "hour": "9 AM", "transactions": 18, "customers": 14 },
+        { "hour": "10 AM", "transactions": 28, "customers": 21 },
+        { "hour": "11 AM", "transactions": 35, "customers": 26 },
+        { "hour": "12 PM", "transactions": 45, "customers": 34 },
+        { "hour": "1 PM", "transactions": 42, "customers": 32 },
+        { "hour": "2 PM", "transactions": 38, "customers": 28 },
+        { "hour": "3 PM", "transactions": 32, "customers": 24 },
+        { "hour": "4 PM", "transactions": 25, "customers": 19 },
+        { "hour": "5 PM", "transactions": 20, "customers": 15 }
+      ],
+      "Sunday": [
+        { "hour": "9 AM", "transactions": 22, "customers": 17 },
+        { "hour": "10 AM", "transactions": 30, "customers": 23 },
+        { "hour": "11 AM", "transactions": 38, "customers": 29 },
+        { "hour": "12 PM", "transactions": 52, "customers": 40 },
+        { "hour": "1 PM", "transactions": 48, "customers": 36 },
+        { "hour": "2 PM", "transactions": 45, "customers": 34 },
+        { "hour": "3 PM", "transactions": 40, "customers": 30 },
+        { "hour": "4 PM", "transactions": 35, "customers": 26 },
+        { "hour": "5 PM", "transactions": 28, "customers": 21 }
+      ]
+    }
+  },
+  "customerMetrics": {
+    "tapidUsers": 68,
+    "newCustomers": 24,
+    "returningCustomers": 76,
+    "averageSpend": 23.45,
+    "totalTransactions": 1247,
+    "peakHour": "2:00 PM - 3:00 PM",
+    "totalRevenue": 29250.15,
+    "revenueGrowth": 12.4
+  },
+  "kpis": [
+    {
+      "id": "tapid_users",
+      "title": "Tapid Users",
+      "value": 68,
+      "valueType": "percentage",
+      "changeValue": 5.2,
+      "changeType": "percentage",
+      "period": "month",
+      "hasInfo": true
+    },
+    {
+      "id": "daily_transactions",
+      "title": "Today's Transactions",
+      "value": 1247,
+      "valueType": "number",
+      "changeValue": 18.3,
+      "changeType": "percentage",
+      "period": "day"
+    },
+    {
+      "id": "average_spend",
+      "title": "Average Spend",
+      "value": 23.45,
+      "valueType": "currency",
+      "changeValue": 7.8,
+      "changeType": "percentage",
+      "period": "week"
+    },
+    {
+      "id": "customer_retention",
+      "title": "New vs Returning",
+      "value": 76,
+      "valueType": "percentage",
+      "changeValue": 3.2,
+      "changeType": "percentage",
+      "period": "month",
+      "description": "customers return"
+    }
+  ],
+  "trendingItems": [
+    { "name": "Coffee", "sales": 245, "changeValue": 12 },
+    { "name": "Sandwiches", "sales": 189, "changeValue": 8 },
+    { "name": "Pastries", "sales": 156, "changeValue": -3 },
+    { "name": "Salads", "sales": 134, "changeValue": 15 },
+    { "name": "Smoothies", "sales": 98, "changeValue": 22 }
+  ],
+  "paymentMethods": [
+    { "method": "Contactless", "percentage": 45, "color": "#008A9B" },
+    { "method": "Chip & PIN", "percentage": 28, "color": "#00BD84" },
+    { "method": "Mobile Pay", "percentage": 20, "color": "#67EF71" },
+    { "method": "Cash", "percentage": 7, "color": "#E5E7EB" }
+  ],
+  "connectionSettings": {
+    "connectionTimeout": 3000,
+    "retryAttempts": 3,
+    "syncInterval": 300000,
+    "defaultTerminalsPerPage": 3
+  },
+  "notifications": {
+    "connectionSuccess": "Terminal connected successfully!",
+    "connectionError": "Failed to connect terminal. Please try again.",
+    "disconnectionSuccess": "Terminal disconnected.",
+    "syncSuccess": "Data synchronized with terminal.",
+    "syncError": "Failed to sync data. Check connection."
+  }
+} 

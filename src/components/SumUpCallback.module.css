@@ -1,0 +1,130 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.iconContainer {
+  margin-bottom: 24px;
+}
+
+.loadingIcon {
+  color: #3b82f6;
+  animation: spin 1s linear infinite;
+}
+
+.successIcon {
+  color: #10b981;
+}
+
+.errorIcon {
+  color: #ef4444;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #1f2937;
+}
+
+.message {
+  font-size: 16px;
+  color: #6b7280;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.successDetails,
+.errorDetails {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.successDetails p,
+.errorDetails p {
+  color: #6b7280;
+  margin-bottom: 16px;
+}
+
+.redirectButton,
+.retryButton {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.retryButton {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.redirectButton:hover,
+.retryButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.redirectButton:active,
+.retryButton:active {
+  transform: translateY(0);
+}
+
+/* Status-specific styles */
+.success .card {
+  border-color: #10b981;
+}
+
+.error .card {
+  border-color: #ef4444;
+}
+
+.processing .card {
+  border-color: #3b82f6;
+}
+
+/* Responsive design */
+@media (max-width: 640px) {
+  .card {
+    padding: 30px 20px;
+    margin: 20px;
+  }
+  
+  .title {
+    font-size: 20px;
+  }
+  
+  .message {
+    font-size: 14px;
+  }
+} 

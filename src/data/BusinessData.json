@@ -1,0 +1,1094 @@
+{
+  "insights": {
+    "customers": [
+      {
+        "id": "C001",
+        "name": "Sarah O'Brien",
+        "email": "sarah.obrien@email.com",
+        "phone": "+353 86 123 4567",
+        "totalSpend": 284.5,
+        "visitCount": 23,
+        "rewardsEarned": 8,
+        "rewardsRedeemed": 5,
+        "lastVisit": "2025-06-10",
+        "firstVisit": "2024-12-15",
+        "segment": "VIP",
+        "status": "active",
+        "location": "dublin-city",
+        "avgOrderValue": 12.37,
+        "tier": "VIP",
+        "birthDate": "1987-03-15",
+        "preferences": ["coffee", "pastries"],
+        "communicationPrefs": { "email": true, "sms": false, "push": true }
+      },
+      {
+        "id": "C002",
+        "name": "Michael Chen",
+        "email": "michael.chen@email.com",
+        "phone": "+353 87 234 5678",
+        "totalSpend": 156.8,
+        "visitCount": 12,
+        "rewardsEarned": 4,
+        "rewardsRedeemed": 3,
+        "lastVisit": "2025-06-11",
+        "firstVisit": "2025-01-20",
+        "segment": "Regular",
+        "status": "active",
+        "location": "dublin-south",
+        "avgOrderValue": 13.07,
+        "tier": "Gold",
+        "birthDate": "1992-08-22",
+        "preferences": ["specialty-coffee"],
+        "communicationPrefs": { "email": true, "sms": true, "push": false }
+      },
+      {
+        "id": "C003",
+        "name": "Emma Walsh",
+        "email": "emma.walsh@email.com",
+        "phone": "+353 85 345 6789",
+        "totalSpend": 89.2,
+        "visitCount": 7,
+        "rewardsEarned": 2,
+        "rewardsRedeemed": 1,
+        "lastVisit": "2025-05-15",
+        "firstVisit": "2025-02-10",
+        "segment": "At-Risk",
+        "status": "at-risk",
+        "location": "cork-main",
+        "avgOrderValue": 12.74,
+        "tier": "Silver",
+        "birthDate": "1995-11-30",
+        "preferences": ["tea", "sandwiches"],
+        "communicationPrefs": { "email": false, "sms": true, "push": true }
+      },
+      {
+        "id": "C004",
+        "name": "David Murphy",
+        "email": "david.murphy@email.com",
+        "phone": "+353 83 456 7890",
+        "totalSpend": 42.3,
+        "visitCount": 3,
+        "rewardsEarned": 1,
+        "rewardsRedeemed": 0,
+        "lastVisit": "2025-06-12",
+        "firstVisit": "2025-05-28",
+        "segment": "New",
+        "status": "new",
+        "location": "dublin-city",
+        "avgOrderValue": 14.1,
+        "tier": "Bronze",
+        "birthDate": "1990-07-18",
+        "preferences": ["coffee"],
+        "communicationPrefs": { "email": true, "sms": false, "push": false }
+      },
+      {
+        "id": "C005",
+        "name": "Lisa Kelly",
+        "email": "lisa.kelly@email.com",
+        "phone": "+353 89 567 8901",
+        "totalSpend": 312.7,
+        "visitCount": 28,
+        "rewardsEarned": 12,
+        "rewardsRedeemed": 9,
+        "lastVisit": "2025-06-09",
+        "firstVisit": "2024-11-05",
+        "segment": "VIP",
+        "status": "active",
+        "location": "dublin-south",
+        "avgOrderValue": 11.17,
+        "tier": "VIP",
+        "birthDate": "1985-12-12",
+        "preferences": ["coffee", "pastries", "lunch"],
+        "communicationPrefs": { "email": true, "sms": true, "push": true }
+      }
+    ],
+    "analytics": {
+      "weeklyRevenue": [
+        { "day": "Mon", "amount": 145 },
+        { "day": "Tue", "amount": 120 },
+        { "day": "Wed", "amount": 178 },
+        { "day": "Thu", "amount": 234 },
+        { "day": "Fri", "amount": 289 },
+        { "day": "Sat", "amount": 354 },
+        { "day": "Sun", "amount": 198 }
+      ],
+      "customerGrowth": [
+        { "month": "Jan", "new": 45, "returning": 67 },
+        { "month": "Feb", "new": 52, "returning": 78 },
+        { "month": "Mar", "new": 48, "returning": 85 },
+        { "month": "Apr", "new": 61, "returning": 92 },
+        { "month": "May", "new": 58, "returning": 89 },
+        { "month": "Jun", "new": 64, "returning": 95 }
+      ]
+    },
+    "campaigns": {
+      "primaryRewards": [
+        {
+          "id": 1,
+          "type": "points",
+          "title": "Spend & Earn Points",
+          "goal": 100,
+          "reward": "Free pastry",
+          "expiry": null,
+          "isActive": true,
+          "notifications": true,
+          "performance": { "earned": 156, "redeemed": 134, "activeCards": 67 },
+          "createdDate": "2025-02-01"
+        }
+      ],
+      "flashPromotions": [
+        {
+          "id": 3,
+          "title": "Rainy Day Special",
+          "startTime": "2025-06-12T14:00",
+          "endTime": "2025-06-12T18:00",
+          "targetGroup": "all",
+          "reward": "Free croissant with any coffee",
+          "limit": 25,
+          "baseCampaignId": 1,
+          "isActive": true,
+          "notifications": true,
+          "performance": { "sent": 247, "redeemed": 18, "remaining": 7 },
+          "createdDate": "2025-06-12"
+        }
+      ],
+      "recurringPromotions": [],
+      "groupRewards": [],
+      "nudgeCampaigns": []
+    },
+    "kpis": [
+      {
+        "title": "Active Customers",
+        "value": 1847,
+        "changeValue": 11,
+        "changeType": "percentage",
+        "period": "month",
+        "previousValue": 1661
+      },
+      {
+        "title": "New vs Returning",
+        "value": 76,
+        "changeValue": 3,
+        "changeType": "percentage",
+        "period": "month",
+        "previousValue": 73
+      },
+      {
+        "title": "Avg Spend per Visit",
+        "value": 18.50,
+        "changeValue": -2,
+        "changeType": "percentage",
+        "period": "month",
+        "previousValue": 18.87
+      },
+      {
+        "title": "Customer Demographics",
+        "value": 23,
+        "changeValue": 5,
+        "changeType": "percentage",
+        "period": "month",
+        "previousValue": 21.9,
+        "demographicData": {
+          "averageAge": 23,
+          "mostCommonGender": "Female",
+          "ageDistribution": {
+            "18-24": 35,
+            "25-34": 40,
+            "35-44": 15,
+            "45+": 10
+          }
+        }
+      }
+    ],
+    "smartInsights": [
+      {
+        "type": "warning",
+        "title": "Monday visits are down 33%",
+        "description": "Consider launching a mid-week flash promotion to boost Monday traffic",
+        "action": "Create Flash Promo",
+        "actionLink": "/control-center?tab=flash",
+        "priority": "high",
+        "metricValue": -33,
+        "metricType": "percentage"
+      },
+      {
+        "type": "opportunity",
+        "title": "Top spenders haven't visited lately",
+        "description": "VIP customers haven't returned in 2+ weeks.",
+        "action": "Send VIP Campaign",
+        "actionLink": "/control-center?tab=targeted",
+        "priority": "high",
+        "daysCount": 14,
+        "customerCount": 37
+      },
+      {
+        "type": "success",
+        "title": "Queue times are within acceptable ranges",
+        "description": "Good job!",
+        "priority": "low",
+        "averageQueueTime": 3.4
+      },
+      {
+        "type": "warning",
+        "title": "High customer churn risk",
+        "description": "customers (15%) haven't visited recently",
+        "action": "Launch Win-Back Campaign",
+        "actionLink": "/control-center?tab=group",
+        "priority": "high",
+        "churnPercentage": 15,
+        "churnCount": 277
+      }
+    ],
+    "customerSegments": [
+      {
+        "title": "First-Time Visitors",
+        "count": 184,
+        "percentage": 25,
+        "avgSpend": 8.20,
+        "visitFreq": 1.0,
+        "growthPercentage": 15,
+        "segment": "new"
+      },
+      {
+        "title": "Regular Customers",
+        "count": 1847,
+        "percentage": 68,
+        "avgSpend": 18.50,
+        "visitFreq": 3.2,
+        "growthPercentage": 8,
+        "segment": "regular"
+      },
+      {
+        "title": "Top 10% Spenders",
+        "count": 271,
+        "percentage": 10,
+        "avgSpend": 42.55,
+        "visitFreq": 5.8,
+        "growthPercentage": -3,
+        "segment": "vip"
+      },
+      {
+        "title": "At-Risk Customers",
+        "count": 407,
+        "percentage": 15,
+        "avgSpend": 16.65,
+        "visitFreq": 2.1,
+        "growthPercentage": 12,
+        "segment": "at-risk"
+      }
+    ]
+  },
+  "home": {
+    "summaryKPIs": [
+      {
+        "title": "Active Users",
+        "value": 1847,
+        "changePercentage": 15.2,
+        "progressPercentage": 78
+      },
+      {
+        "title": "Total Points Collected",
+        "value": 45230,
+        "changePercentage": 22.8,
+        "progressPercentage": 85
+      },
+      {
+        "title": "Total Revenue",
+        "value": 24500,
+        "changePercentage": 18.7,
+        "progressPercentage": 72
+      },
+      {
+        "title": "New Customers This Week",
+        "value": 89,
+        "changePercentage": 12.3,
+        "progressPercentage": 65
+      }
+    ],
+    "sectionSummaries": [
+      {
+        "title": "Launch Pad",
+        "description": "Your loyalty campaign hub",
+        "stats": {
+          "active": 1,
+          "total": 1,
+          "performancePercentage": 23
+        },
+        "status": "Active",
+        "route": "/launchpad"
+      },
+      {
+        "title": "Boosters",
+        "description": "Campaign amplifiers & promotions",
+        "stats": {
+          "active": 2,
+          "total": 0,
+          "performancePercentage": 18
+        },
+        "status": "Active",
+        "route": "/boosters"
+      },
+      {
+        "title": "Insights",
+        "description": "Customer analytics & trends",
+        "stats": {
+          "active": 4,
+          "total": 0,
+          "performancePercentage": 12
+        },
+        "status": "Updated",
+        "route": "/insights"
+      },
+      {
+        "title": "Reports",
+        "description": "Detailed analytics & exports",
+        "stats": {
+          "active": 0,
+          "total": 0,
+          "performancePercentage": 8
+        },
+        "status": "Available",
+        "route": "/reports"
+      }
+    ],
+    "recentActivity": [
+      {
+        "type": "campaign",
+        "title": "Loyalty Campaign Created",
+        "description": "New points program launched",
+        "timestamp": "2025-06-12T14:00:00Z"
+      },
+      {
+        "type": "customer",
+        "title": "New Customer Joined",
+        "description": "Alice Smith earned first points",
+        "timestamp": "2025-06-12T10:00:00Z"
+      },
+      {
+        "type": "reward",
+        "title": "Reward Redeemed",
+        "description": "Free coffee claimed by Bob",
+        "timestamp": "2025-06-12T08:00:00Z"
+      },
+      {
+        "type": "insight",
+        "title": "New Insight Generated",
+        "description": "Customer retention trend detected",
+        "timestamp": "2025-06-11T16:00:00Z"
+      }
+    ],
+    "notifications": [
+      {
+        "type": "success",
+        "title": "Campaign Launched",
+        "message": "Your loyalty campaign is now live and performing well",
+        "timestamp": "2025-06-12T14:00:00Z"
+      },
+      {
+        "type": "warning",
+        "title": "Low Engagement",
+        "message": "Consider adding a booster to increase customer activity",
+        "timestamp": "2025-06-12T10:00:00Z"
+      },
+      {
+        "type": "info",
+        "title": "New Customer",
+        "message": "Alice Smith joined your loyalty program",
+        "timestamp": "2025-06-12T08:00:00Z"
+      },
+      {
+        "type": "success",
+        "title": "Reward Redeemed",
+        "message": "Bob claimed his free coffee reward",
+        "timestamp": "2025-06-11T16:00:00Z"
+      }
+    ],
+    "peakTimesData": [
+      { "hour": 6, "value": 15 },
+      { "hour": 8, "value": 45 },
+      { "hour": 10, "value": 65 },
+      { "hour": 12, "value": 95 },
+      { "hour": 14, "value": 85 },
+      { "hour": 16, "value": 75 },
+      { "hour": 18, "value": 60 },
+      { "hour": 20, "value": 40 },
+      { "hour": 22, "value": 25 }
+    ],
+    "customerDistributionData": [
+      { "ageRange": "18-24", "male": 25, "female": 30 },
+      { "ageRange": "25-34", "male": 35, "female": 40 },
+      { "ageRange": "35-44", "male": 30, "female": 25 },
+      { "ageRange": "45-54", "male": 20, "female": 15 },
+      { "ageRange": "55+", "male": 10, "female": 8 }
+    ],
+    "leaderboard": [
+      { "name": "Alice Smith", "spend": 2450, "visits": 12, "rank": 1 },
+      { "name": "Bob Johnson", "spend": 1890, "visits": 8, "rank": 2 },
+      { "name": "Carol Davis", "spend": 1650, "visits": 10, "rank": 3 },
+      { "name": "David Wilson", "spend": 1420, "visits": 7, "rank": 4 },
+      { "name": "Emma Brown", "spend": 1280, "visits": 9, "rank": 5 }
+    ],
+    "dataSources": [
+      {
+        "name": "POS System",
+        "status": "Connected",
+        "lastSync": "2025-06-12T15:30:00Z"
+      },
+      {
+        "name": "Customer Database",
+        "status": "Connected",
+        "lastSync": "2025-06-12T15:25:00Z"
+      },
+      {
+        "name": "Loyalty Program",
+        "status": "Connected",
+        "lastSync": "2025-06-12T15:20:00Z"
+      }
+    ],
+    "marketTrends": [
+      { "trend": "Users spending more this week due to sunny weather", "impact": "positive", "value": 23 },
+      { "trend": "Afternoon coffee orders up with remote work trend", "impact": "positive", "value": 15 },
+      { "trend": "Weekend brunch spending increased significantly", "impact": "positive", "value": 31 },
+      { "trend": "Evening orders down due to new restaurant opening", "impact": "negative", "value": -8 }
+    ],
+    "dublinHotspots": [
+      {
+        "location": "Docklands",
+        "description": "Highest activity with +25% growth",
+        "growthPercentage": 25
+      },
+      {
+        "location": "City Center",
+        "description": "Strong performance at +18%",
+        "growthPercentage": 18
+      },
+      {
+        "location": "Temple Bar",
+        "description": "Steady growth at +12%",
+        "growthPercentage": 12
+      },
+      {
+        "location": "St. Stephen's",
+        "description": "Moderate activity at +8%",
+        "growthPercentage": 8
+      }
+    ],
+    "revenueInsights": [
+      {
+        "label": "Average Order Value",
+        "value": 18.50,
+        "progress": 78,
+        "changePercentage": 12
+      },
+      {
+        "label": "Customer Retention Rate",
+        "value": 87,
+        "progress": 87,
+        "changePercentage": 5
+      },
+      {
+        "label": "Peak Hours Revenue",
+        "value": 2450,
+        "progress": 92,
+        "changePercentage": 18
+      },
+      {
+        "label": "Loyalty Points Redeemed",
+        "value": 1247,
+        "progress": 65,
+        "changePercentage": 23
+      }
+    ],
+    "todoList": [
+      {
+        "id": "setup_tapid",
+        "title": "Set up with Tapid",
+        "description": "Complete your Tapid account setup",
+        "completed": true,
+        "priority": "high"
+      },
+      {
+        "id": "add_profile_values",
+        "title": "Add values to profile",
+        "description": "Fill in your business profile information",
+        "completed": true,
+        "priority": "high"
+      },
+      {
+        "id": "connect_pos",
+        "title": "Connect POS terminal",
+        "description": "Link your point-of-sale system",
+        "completed": false,
+        "priority": "high"
+      },
+      {
+        "id": "launch_promotion",
+        "title": "Launch promotion campaign",
+        "description": "Create and activate your first campaign",
+        "completed": false,
+        "priority": "medium"
+      },
+      {
+        "id": "launch_booster",
+        "title": "Launch booster",
+        "description": "Set up campaign amplifiers",
+        "completed": false,
+        "priority": "medium"
+      },
+      {
+        "id": "launch_referral",
+        "title": "Launch referral program",
+        "description": "Enable customer referral rewards",
+        "completed": false,
+        "priority": "low"
+      }
+    ]
+  },
+  "connect": {
+    "posTerminals": [
+      {
+        "id": "sumup",
+        "name": "SumUp",
+        "description": "Popular card reader and payment terminal",
+        "features": ["Contactless payments", "Mobile app integration", "Low transaction fees"],
+        "status": "available"
+      },
+      {
+        "id": "square",
+        "name": "Square",
+        "description": "Complete point-of-sale system",
+        "features": ["Full POS system", "Analytics dashboard", "Inventory management"],
+        "status": "available"
+      },
+      {
+        "id": "clover",
+        "name": "Clover",
+        "description": "Flexible POS for retail, restaurants, and services",
+        "features": ["Customizable hardware", "App marketplace", "Multi-location support"],
+        "status": "coming_soon"
+      },
+      {
+        "id": "shopify",
+        "name": "Shopify POS",
+        "description": "POS for e-commerce and brick-and-mortar",
+        "features": ["Unified online/offline sales", "Inventory sync", "Customer profiles"],
+        "status": "coming_soon"
+      }
+    ],
+    "analyticsKPIs": [
+      {
+        "title": "Tapid Users",
+        "value": 68,
+        "changePercentage": 5.2,
+        "period": "month"
+      },
+      {
+        "title": "Today's Transactions",
+        "value": 1247,
+        "changePercentage": 18.3,
+        "period": "day"
+      },
+      {
+        "title": "Average Spend",
+        "value": 23.45,
+        "changePercentage": 7.8,
+        "period": "week"
+      },
+      {
+        "title": "New vs Returning",
+        "value": 76,
+        "changePercentage": 3.2,
+        "period": "month"
+      }
+    ],
+    "trendingItems": [
+      { "name": "Coffee", "sales": 245, "changePercentage": 12 },
+      { "name": "Sandwiches", "sales": 189, "changePercentage": 8 },
+      { "name": "Pastries", "sales": 156, "changePercentage": -3 },
+      { "name": "Salads", "sales": 134, "changePercentage": 15 },
+      { "name": "Smoothies", "sales": 98, "changePercentage": 22 }
+    ],
+    "paymentMethods": [
+      { "method": "Contactless", "percentage": 45 },
+      { "method": "Chip & PIN", "percentage": 28 },
+      { "method": "Mobile Pay", "percentage": 20 },
+      { "method": "Cash", "percentage": 7 }
+    ],
+    "queueEfficiency": {
+      "currentPerformance": {
+        "efficiencyScore": 82,
+        "averageServiceTime": 3.4,
+        "customersPerHour": 18,
+        "busyThreshold": 40,
+        "peakEfficiency": 89,
+        "peakHour": 11
+      },
+      "weeklyTrend": [
+        {
+          "day": "Mon",
+          "efficiency": 78,
+          "serviceTime": 3.8,
+          "customersPerHour": 16,
+          "status": "optimal"
+        },
+        {
+          "day": "Tue", 
+          "efficiency": 95,
+          "serviceTime": 2.1,
+          "customersPerHour": 8,
+          "status": "underutilized"
+        },
+        {
+          "day": "Wed",
+          "efficiency": 79,
+          "serviceTime": 3.6,
+          "customersPerHour": 17,
+          "status": "optimal"
+        },
+        {
+          "day": "Thu",
+          "efficiency": 85,
+          "serviceTime": 3.1,
+          "customersPerHour": 19,
+          "status": "optimal"
+        },
+        {
+          "day": "Fri",
+          "efficiency": 65,
+          "serviceTime": 4.8,
+          "customersPerHour": 22,
+          "status": "overworked"
+        },
+        {
+          "day": "Sat",
+          "efficiency": 92,
+          "serviceTime": 2.5,
+          "customersPerHour": 11,
+          "status": "underutilized"
+        },
+        {
+          "day": "Sun",
+          "efficiency": 68,
+          "serviceTime": 4.5,
+          "customersPerHour": 25,
+          "status": "overworked"
+        }
+      ]
+    },
+    "dailyHourlyActivity": {
+      "Monday": [
+        { "hour": 9, "transactions": 12, "customers": 8 },
+        { "hour": 10, "transactions": 18, "customers": 12 },
+        { "hour": 11, "transactions": 25, "customers": 18 },
+        { "hour": 12, "transactions": 42, "customers": 32 },
+        { "hour": 13, "transactions": 38, "customers": 28 },
+        { "hour": 14, "transactions": 35, "customers": 25 },
+        { "hour": 15, "transactions": 28, "customers": 20 },
+        { "hour": 16, "transactions": 22, "customers": 16 },
+        { "hour": 17, "transactions": 15, "customers": 11 }
+      ],
+      "Tuesday": [
+        { "hour": 9, "transactions": 8, "customers": 6 },
+        { "hour": 10, "transactions": 14, "customers": 10 },
+        { "hour": 11, "transactions": 20, "customers": 15 },
+        { "hour": 12, "transactions": 35, "customers": 26 },
+        { "hour": 13, "transactions": 32, "customers": 24 },
+        { "hour": 14, "transactions": 28, "customers": 21 },
+        { "hour": 15, "transactions": 22, "customers": 16 },
+        { "hour": 16, "transactions": 18, "customers": 13 },
+        { "hour": 17, "transactions": 12, "customers": 9 }
+      ],
+      "Wednesday": [
+        { "hour": 9, "transactions": 15, "customers": 11 },
+        { "hour": 10, "transactions": 22, "customers": 16 },
+        { "hour": 11, "transactions": 28, "customers": 21 },
+        { "hour": 12, "transactions": 45, "customers": 34 },
+        { "hour": 13, "transactions": 41, "customers": 31 },
+        { "hour": 14, "transactions": 38, "customers": 28 },
+        { "hour": 15, "transactions": 32, "customers": 24 },
+        { "hour": 16, "transactions": 25, "customers": 19 },
+        { "hour": 17, "transactions": 18, "customers": 14 }
+      ],
+      "Thursday": [
+        { "hour": 9, "transactions": 20, "customers": 15 },
+        { "hour": 10, "transactions": 26, "customers": 19 },
+        { "hour": 11, "transactions": 32, "customers": 24 },
+        { "hour": 12, "transactions": 48, "customers": 36 },
+        { "hour": 13, "transactions": 44, "customers": 33 },
+        { "hour": 14, "transactions": 40, "customers": 30 },
+        { "hour": 15, "transactions": 35, "customers": 26 },
+        { "hour": 16, "transactions": 28, "customers": 21 },
+        { "hour": 17, "transactions": 22, "customers": 16 }
+      ],
+      "Friday": [
+        { "hour": 9, "transactions": 25, "customers": 19 },
+        { "hour": 10, "transactions": 35, "customers": 26 },
+        { "hour": 11, "transactions": 42, "customers": 32 },
+        { "hour": 12, "transactions": 58, "customers": 44 },
+        { "hour": 13, "transactions": 55, "customers": 42 },
+        { "hour": 14, "transactions": 52, "customers": 39 },
+        { "hour": 15, "transactions": 45, "customers": 34 },
+        { "hour": 16, "transactions": 38, "customers": 29 },
+        { "hour": 17, "transactions": 32, "customers": 24 }
+      ],
+      "Saturday": [
+        { "hour": 9, "transactions": 18, "customers": 14 },
+        { "hour": 10, "transactions": 28, "customers": 21 },
+        { "hour": 11, "transactions": 35, "customers": 26 },
+        { "hour": 12, "transactions": 45, "customers": 34 },
+        { "hour": 13, "transactions": 42, "customers": 32 },
+        { "hour": 14, "transactions": 38, "customers": 28 },
+        { "hour": 15, "transactions": 32, "customers": 24 },
+        { "hour": 16, "transactions": 25, "customers": 19 },
+        { "hour": 17, "transactions": 20, "customers": 15 }
+      ],
+      "Sunday": [
+        { "hour": 9, "transactions": 22, "customers": 17 },
+        { "hour": 10, "transactions": 30, "customers": 23 },
+        { "hour": 11, "transactions": 38, "customers": 29 },
+        { "hour": 12, "transactions": 52, "customers": 40 },
+        { "hour": 13, "transactions": 48, "customers": 36 },
+        { "hour": 14, "transactions": 45, "customers": 34 },
+        { "hour": 15, "transactions": 40, "customers": 30 },
+        { "hour": 16, "transactions": 35, "customers": 26 },
+        { "hour": 17, "transactions": 28, "customers": 21 }
+      ]
+    },
+    "paymentCostAnalysis": {
+      "totalTransactions": 1247,
+      "averageSpend": 23.45,
+      "currentProviderRate": 2.5,
+      "tapidPayRate": 1.5,
+      "savingsRate": 1.0,
+      "totalSales": 29242.15,
+      "currentProviderCosts": 731.05,
+      "tapidPayCosts": 438.63,
+      "monthlySavings": 292.42,
+      "annualSavings": 3509.04
+    }
+  },
+  "controlCenter": {
+    "kpis": [
+      {
+        "title": "Total Customers",
+        "value": 77994
+      },
+      {
+        "title": "Active Customers",
+        "value": 33246
+      },
+      {
+        "title": "Avg Spend",
+        "value": 2.47
+      },
+      {
+        "title": "Redemption Rate",
+        "value": 68
+      }
+    ],
+    "campaignExample": {
+      "campaignName": "Tapid Points Campaign",
+      "rewardDescription": "Free items for loyal spenders",
+      "rewards": {
+        "tier1": { "rewardText": "Free Espresso", "points": 500 },
+        "tier2": { "rewardText": "Free Lunch Combo", "points": 1000 },
+        "tier3": { "rewardText": "€10 Voucher", "points": 2000 }
+      },
+      "isActive": true
+    },
+    "topCustomers": [
+      { "name": "Alice", "points": 1876 },
+      { "name": "Bob", "points": 1654 },
+      { "name": "Charlie", "points": 1432 },
+      { "name": "Diana", "points": 1298 },
+      { "name": "Eve", "points": 1156 },
+      { "name": "Frank", "points": 1034 },
+      { "name": "Grace", "points": 987 },
+      { "name": "Hugo", "points": 876 },
+      { "name": "Ivy", "points": 765 },
+      { "name": "Jack", "points": 654 }
+    ],
+    "performanceMetrics": [
+      {
+        "title": "Avg Points per User",
+        "value": 1240,
+        "changePercentage": 4,
+        "period": "week"
+      },
+      {
+        "title": "Users with Redeemable Rewards",
+        "value": 84,
+        "percentage": 42
+      },
+      {
+        "title": "Most Redeemed Tier",
+        "value": 1000,
+        "breakdown": { "500": 60, "1000": 100, "2000": 40 }
+      },
+      {
+        "title": "Unredeemed Rewards",
+        "value": 37
+      },
+      {
+        "title": "Redemption Rate",
+        "value": 68
+      },
+      {
+        "title": "Redemption Timing",
+        "value": 3.2
+      },
+      {
+        "title": "First-time Earners This Week",
+        "value": 12
+      },
+      {
+        "title": "Redemption Funnel",
+        "value": 68,
+        "percentage": 68
+      }
+    ]
+  },
+  "reports": {
+    "overviewMetrics": [
+      {
+        "title": "Customer Analytics",
+        "value": 2847,
+        "changePercentage": 12,
+        "period": "month",
+        "reportType": "customer"
+      },
+      {
+        "title": "Revenue Analytics",
+        "value": 45230,
+        "changePercentage": 18,
+        "period": "month",
+        "reportType": "revenue"
+      },
+      {
+        "title": "Campaign Performance",
+        "value": 156,
+        "changePercentage": 23,
+        "period": "month",
+        "reportType": "campaign"
+      },
+      {
+        "title": "Loyalty Metrics",
+        "value": 89,
+        "changePercentage": 5,
+        "period": "month",
+        "reportType": "loyalty"
+      }
+    ],
+    "generatedReports": [
+      {
+        "id": 1,
+        "type": "customer",
+        "generatedAt": "2024-01-15T10:30:00Z",
+        "status": "completed"
+      },
+      {
+        "id": 2,
+        "type": "revenue",
+        "generatedAt": "2024-01-14T14:20:00Z",
+        "status": "completed"
+      },
+      {
+        "id": 3,
+        "type": "campaign",
+        "generatedAt": "2024-01-13T09:15:00Z",
+        "status": "generating"
+      }
+    ],
+    "scheduledReports": [
+      {
+        "id": 1,
+        "frequency": "weekly",
+        "recipients": ["team@company.com", "manager@company.com"],
+        "createdAt": "2024-01-15",
+        "dataScope": {
+          "campaignOverview": true,
+          "boosterPerformance": true,
+          "customerSegments": false,
+          "averageSpend": false,
+          "redemptionFunnel": false,
+          "locationStats": false
+        }
+      }
+    ],
+    "dataScopeOptions": [
+      {
+        "key": "campaignOverview",
+        "title": "Campaign Overview",
+        "description": "Live KPIs: points issued, redemption rate"
+      },
+      {
+        "key": "boosterPerformance",
+        "title": "Booster Performance",
+        "description": "Flash & recurring booster analytics"
+      },
+      {
+        "key": "customerSegments",
+        "title": "Customer Segments",
+        "description": "Breakdown by frequency & spend"
+      },
+      {
+        "key": "averageSpend",
+        "title": "Average Spend",
+        "description": "Points per user & transaction data"
+      },
+      {
+        "key": "redemptionFunnel",
+        "title": "Redemption Funnel",
+        "description": "Earn → eligible → redeemed flow"
+      },
+      {
+        "key": "locationStats",
+        "title": "Location Stats",
+        "description": "Multi-location performance data"
+      }
+    ]
+  },
+  "referral": {
+    "metrics": [
+      {
+        "title": "Total Referrals",
+        "value": 312,
+        "changeThisMonth": 23
+      },
+      {
+        "title": "Unique Referrers",
+        "value": 248,
+        "changeThisMonth": 18
+      },
+      {
+        "title": "Total Points Earned",
+        "value": 31200,
+        "pointsPerReferral": 100
+      },
+      {
+        "title": "Money You Earn",
+        "value": 468.00,
+        "earningsPerPerson": 1.50,
+        "totalPeople": 312
+      }
+    ],
+    "recentReferrals": [
+      { "email": "emma.wilson@email.com", "date": "2024-01-15", "status": "Paid", "referralNumber": 312, "points": 100, "tapidPaid": true },
+      { "email": "james.brown@email.com", "date": "2024-01-14", "status": "Pending", "referralNumber": 311, "points": 100, "tapidPaid": true },
+      { "email": "sofia.garcia@email.com", "date": "2024-01-12", "status": "Paid", "referralNumber": 310, "points": 100, "tapidPaid": true },
+      { "email": "alex.chen@email.com", "date": "2024-01-10", "status": "Paid", "referralNumber": 309, "points": 100, "tapidPaid": true },
+      { "email": "maria.lopez@email.com", "date": "2024-01-08", "status": "Pending", "referralNumber": 308, "points": 100, "tapidPaid": true }
+    ],
+    "programSettings": {
+      "referralCode": "REF2024TIM",
+      "referralLink": "https://tapid.com/join/REF2024TIM",
+      "pointsReward": 100,
+      "isTapidSponsored": true,
+      "tapidLimit": 500,
+      "tapidEarningsPerReferral": 1.50
+    },
+    "tapidCodes": [
+      {
+        "code": "TAPID500",
+        "limit": 500,
+        "description": "Tapid will pay YOU €1.50 for each person you refer (up to 500 people)!"
+      },
+      {
+        "code": "TAPID250",
+        "limit": 250,
+        "description": "Tapid will pay YOU €1.50 for each person you refer (up to 250 people)!"
+      },
+      {
+        "code": "TAPID100",
+        "limit": 100,
+        "description": "Tapid will pay YOU €1.50 for each person you refer (up to 100 people)!"
+      }
+    ]
+  },
+  "boosters": {
+    "flash": [
+      {
+        "name": "Weekend Double Points",
+        "type": "Flash",
+        "status": "Active",
+        "startDate": "2024-06-15",
+        "endDate": "2024-06-16",
+        "duration": 1,
+        "summary": "+2x points on all purchases",
+        "stats": { "users": 42, "points": 3200 },
+        "flashType": "multiplier",
+        "multiplier": 2
+      }
+    ],
+    "recurring": [
+      {
+        "name": "Tuesday Bonus",
+        "type": "Recurring",
+        "status": "Paused",
+        "day": "Tuesday",
+        "startTime": "12:00",
+        "endTime": "15:00",
+        "summary": "+50 pts for €5+ spend",
+        "stats": { "users": 18, "points": 900 },
+        "bonus": 50,
+        "threshold": 5
+      }
+    ],
+    "targeted": [],
+    "performanceMetrics": {
+      "flash": {
+        "totalBoosters": 1,
+        "usersImpacted": 42,
+        "pointsAwarded": 3200,
+        "mostPopular": "Weekend Double Points"
+      },
+      "recurring": {
+        "totalBoosters": 1,
+        "usersImpacted": 18,
+        "pointsAwarded": 900,
+        "mostEngagedDay": "Tuesday",
+        "mostEngagedUsers": 18
+      },
+      "overall": {
+        "totalBoosters": 2,
+        "totalUsersImpacted": 60,
+        "totalPointsAwarded": 4100,
+        "weeklyGrowthBoosters": 1,
+        "weeklyGrowthUsers": 8,
+        "weeklyGrowthPoints": 1200
+      }
+    }
+  },
+  "settings": {
+    "businessInfo": {
+      "companyName": "",
+      "industry": "",
+      "websiteUrl": "",
+      "taxId": "",
+      "primaryContact": "",
+      "contactEmail": "",
+      "contactPhone": "",
+      "address": ""
+    },
+    "preferences": {
+      "twoFactorAuth": false,
+      "emailNotifications": true,
+      "smsNotifications": false,
+      "darkMode": false,
+      "primaryColor": "#10b981",
+      "sessionTimeout": 120,
+      "logRetention": "30 days"
+    },
+    "locations": [
+      {
+        "id": "loc_1",
+        "name": "Main Location",
+        "address": "",
+        "phone": "",
+        "operatingHours": {},
+        "isActive": true,
+        "isPrimary": true
+      }
+    ]
+  }
+}

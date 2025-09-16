@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "beeaproduction"
+  },
+  "targets": {
+    "beeaproduction": {
+      "hosting": {
+        "tapid-dashboard": [
+          "tapid-dashboard"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
