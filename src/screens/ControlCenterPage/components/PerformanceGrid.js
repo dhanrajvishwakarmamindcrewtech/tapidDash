@@ -1,6 +1,5 @@
 import React, { useState, useMemo } from "react";
-import { BarChart3, TrendingUp, Sparkles, RefreshCw } from "lucide-react";
-import DonutChart from "./DonutChart";
+import { BarChart3, TrendingUp, Sparkles } from "lucide-react";
 import { formatCurrency, formatNumber } from "../utils/formatters";
 import { UI_CONFIG } from "../config/uiConfig";
 import styles from "../LaunchPadPage.module.css";
@@ -22,7 +21,7 @@ const PerformanceGrid = ({ data, hasCampaign, onNudgeUsers }) => {
             label: "Avg Order Value",
             value: formatCurrency(data.avgOrderValue),
           },
-          { label: "Revenue Growth", value: "+12.5%" },
+          // { label: "Revenue Growth", value: "+12.5%" },
         ],
       },
       {
@@ -37,7 +36,7 @@ const PerformanceGrid = ({ data, hasCampaign, onNudgeUsers }) => {
             label: "Active Users",
             value: formatNumber(Math.floor(data.totalCustomers * 0.7)),
           },
-          { label: "Retention Rate", value: "68%" },
+          // { label: "Retention Rate", value: "68%" },
         ],
       },
       {
@@ -48,22 +47,22 @@ const PerformanceGrid = ({ data, hasCampaign, onNudgeUsers }) => {
             label: "Total Transactions",
             value: formatNumber(data.totalTransactions),
           },
-          { label: "Success Rate", value: "98.2%" },
+          // { label: "Success Rate", value: "98.2%" },
           {
             label: "Daily Average",
             value: formatNumber(Math.floor(data.totalTransactions / 30)),
           },
         ],
       },
-      {
-        title: "Growth Metrics",
-        icon: <RefreshCw size={24} />,
-        metrics: [
-          { label: "Monthly Growth", value: "+15.3%" },
-          { label: "Customer Growth", value: "+8.7%" },
-          { label: "Revenue Growth", value: "+12.1%" },
-        ],
-      },
+      // {
+      //   title: "Growth Metrics",
+      //   icon: <RefreshCw size={24} />,
+      //   metrics: [
+      //     { label: "Monthly Growth", value: "+15.3%" },
+      //     { label: "Customer Growth", value: "+8.7%" },
+      //     { label: "Revenue Growth", value: "+12.1%" },
+      //   ],
+      // },
     ];
   }, [data]);
 
