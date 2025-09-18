@@ -65,7 +65,7 @@ const AddressAutocomplete = ({
     autocompleteService.current.getPlacePredictions(
       {
         input: query,
-        // componentRestrictions: { country: 'ie' }, // Restrict to Ireland, change as needed
+        componentRestrictions: { country: "ie" }, // Restrict to Ireland, change as needed
       },
       (predictions, status) => {
         setIsLoading(false);
